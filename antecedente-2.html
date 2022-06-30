@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Antecedente 2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+        <style>
+            @media (min-width: 992px) {
+                .container {
+                    max-width: 900px;
+                }
+            }
+            .card,
+            .card-img-top {
+                border: none;
+                border-radius: 0 0;
+            }
+        </style>
+    </head>
+    <body class="bg-light">
+        <header class="container">
+            <div class="row">
+                <div class="col-12 py-3">
+                    <h2 class="text-center mt-5 text-muted fs-4">Camila González</h2>
+
+                    <h1 class="text-center mt-3 mb-4 fs-2"><a href="index.html">Saga NieR</a></h1>
+
+                    <p class="lead text-center mx-auto w-75">Este sitio Web permitirá conocer, a modo de wikipedia interactiva la linea temporal de la saga de videojuegos Nier, y su conexion con la saga Drakengard, además de proveer información acerca de su autor Yoko Taro.</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="container" id="antecedentes">
+            <div class="row">
+                <div class="col-12 pt-3 pb-5">
+                    <h3 class="text-center mt-5 mb-4"><a href="index.html#antecedentes">&larr;</a> | Journey website</h3>
+
+                    <img src="img/antecedente-2.png" class="w-100 mb-3 shadow-sm" />
+                    <p class="m-4 text-muted">
+                        Esta pagina,a primera vista cautiva por su simpleza y gran diseño, unos de los elementos que considero mas impostante es el como le otorga espacios por separado para cada seccion de la pagina, variando asi la experiencia en la pagina web, es por esto que en la categoria de desirability posee 75 puntos. En las demas categorias de lighthouse esta pagina tambien tubo un desempeño bastante bueno, teniendo mas de 92 puntos en 3 de las 4 categorias que ofrece, siendo el aspeco mas deficiente el de Performance, con un total de 48 puntos.
+                    </p>
+
+                    <canvas id="grafico" class="w-50 mx-auto my-5"></canvas>
+
+                    <p class="m-4 text-muted">
+                        Según el reporte de lighthouse, algunad e las cosas que podria hacer la pagina para obtener un mejor desempeño es cuidar el uso del tipo de formato de imagenes, preferir webP o AVIF, reducir el javascript no utilizado y reducir el css no utilizado.
+                    </p>
+
+                    <h3 class="text-center mt-5 mb-4 text-decoration-underline">Otros antecedentes</h3>
+
+                    <div class="row row-cols-1 row-cols-md-3 pb-3">
+                        <div class="col mb-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="img/antecedente-thumb-0.webp" class="card-img-top" alt="Nombre de la tipo" />
+                                <div class="card-body">
+                                    <h6 class="card-title">Firewatch website</h6>
+                                    <p class="card-text small"><a href="antecedente-0.html" class="stretched-link">Ver análisis &rarr;</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="img/antecedente-thumb-1.webp" class="card-img-top" alt="Nombre de la tipo" />
+                                <div class="card-body">
+                                    <h6 class="card-title">Night in the woods website</h6>
+                                    <p class="card-text small"><a href="antecedente-1.html" class="stretched-link">Ver análisis &rarr;</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="img/antecedente-thumb-3.webp" class="card-img-top" alt="Nombre de la tipo" />
+                                <div class="card-body">
+                                    <h6 class="card-title">Sonic the hedgehog games website</h6>
+                                    <p class="card-text small"><a href="antecedente-3.html" class="stretched-link">Ver análisis &rarr;</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-secondary">
+            <div class="container text-white-50">
+                <div class="row py-3">
+                    <div class="col-12">
+                        <p class="d-flex justify-content-between small p-1 m-0">
+                            <a href="index.html">Saga NieR</a>
+                            <!--reemplaza el # que sigue con vínculo a tu propio GitHub-->
+                            <a href="https://github.com/fant4sma" target="_blank" class="d-none d-lg-inline">Camila González © 2022</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+            integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script>
+            const config = {
+                type: "radar",
+                data: {
+                    labels: ["PERFORMANCE", "ACCESIBILITY", "BEST PRACTICES", "SEO", "DESIRABILITY"],
+                    datasets: [
+                        {
+                            data: [46, 94, 100, 92, 75],
+                            fill: true,
+                            backgroundColor: "rgba(255, 99, 132, 0.2)",
+                            borderColor: "rgb(255, 99, 132)",
+                        },
+                    ],
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                    },
+                    scale: {
+                        min: 0,
+                        max: 100,
+                    },
+                },
+            };
+            const myChart = new Chart(document.getElementById("grafico"), config);
+            document.querySelectorAll("a").forEach((a) => a.classList.add("link-dark"));
+        </script>
+    </body>
+</html>
